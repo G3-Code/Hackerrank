@@ -7,7 +7,7 @@ function gradingStudents(grades) {
       }
     }
   }
-  console.log(grades);
+  return grades;
 }
 
 gradingStudents([73, 67, 38, 33]);
