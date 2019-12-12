@@ -28,21 +28,16 @@ function deleteProducts(ids, m) {
       m = m - cache2D[id][1];
       cache2D.splice(id, 1);
       id = id - 1;
-      console.log(cache2D);
-      console.log(m);
     } else {
-      console.log(`id is ${id}, ${cache2D[id][1]}`);
       if (m != 0) {
         let temp = m;
         m = m - cache2D[id][1];
         cache2D[id][1] = cache2D[id][1] - temp;
-        console.log(`Cache2D value is ${cache2D}`);
       }
       if (cache2D[id][1] === 0) {
         cache2D.splice(id, 1);
         id = id - 1;
       }
-      console.log(m, cache2D);
       if (m <= 0) {
         break;
       }
