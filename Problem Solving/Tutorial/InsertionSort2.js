@@ -3,19 +3,16 @@
 function insertionSort2(n, arr) {
   let temp = 0;
   let isSwapped = true;
-  while (isSwapped) {
-    isSwapped = false;
-    for (let i = 0; i < arr.length; i++) {
-      let j = i + 1;
-      if (arr[i] > arr[j]) {
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        isSwapped = true;
-        console.log(arr);
+
+  for (let i = 1; i < arr.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (arr[i] < arr[j]) {
+        let item = arr.splice(i, 1);
+        arr.splice(j, 0, item[0]);
         break;
       }
     }
+    console.log(arr.toString().replace(/,/g, " "));
   }
 }
 
