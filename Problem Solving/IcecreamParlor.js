@@ -1,5 +1,2 @@
 // Complete the icecreamParlor function below.
-function icecreamParlor(m, arr) {
-    
-
-}
+export default function icecreamParlor(m, arr) {}
