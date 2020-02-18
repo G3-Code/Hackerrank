@@ -5,7 +5,7 @@ function icecreamParlor(m, arr) {
       let val = arr[i];
       arr[i] = 0;
       console.log(arr);
-      return [i + 1, arr.findIndex(ar => ar === m - arr[i]) + 1];
+      return [i + 1, arr.findIndex(ar => ar === m - val) + 1];
     }
   }
 }
