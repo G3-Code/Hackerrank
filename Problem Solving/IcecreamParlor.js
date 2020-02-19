@@ -4,11 +4,11 @@ function icecreamParlor(m, arr) {
     if (arr.includes(m - arr[i])) {
       let val = arr[i];
       arr[i] = 0;
-      console.log(arr);
       return [i + 1, arr.findIndex(ar => ar === m - val) + 1];
     }
   }
 }
 
-console.log(icecreamParlor(4, [1, 4, 5, 3, 2]));
-console.log(icecreamParlor(4, [2, 2, 4, 3]));
+//console.log(icecreamParlor(100, [5, 75, 25]));
+console.log(icecreamParlor(200, [150, 24, 79, 50, 88, 345, 3]));
+// console.log(icecreamParlor(4, [2, 2, 4, 3]));
