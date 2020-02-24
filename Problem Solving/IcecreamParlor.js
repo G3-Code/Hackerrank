@@ -1,10 +1,14 @@
 // Complete the icecreamParlor function below.
 function icecreamParlor(m, arr) {
+  let costMap = new Map();
   for (let i = 0; i < arr.length; i++) {
-    if (arr.includes(m - arr[i])) {
-      let val = arr[i];
-      arr[i] = 0;
-      return [i + 1, arr.findIndex(ar => ar === m - val) + 1];
+    let balance = m - arr[i];
+    if (costMap.has(balance)) {
+      // result available
+      return [costMap.get(balance), i + 1];
+    } else {
+      // add to map
+      costMap.set(arr[i], i + 1);
     }
   }
 }
